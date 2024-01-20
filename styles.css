@@ -1,0 +1,984 @@
+body{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    overflow-x  : hidden;
+}
+
+
+p{
+    color: white;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.front-background{
+    position: absolute;
+    background-image: linear-gradient(to right bottom, #444242, #383636, #2c2b2b, #212020, #161516, #111010, #090809, #000000, #000000, #000000, #000000, #000000);    min-height: 100vh; /* Use 100vh for full viewport height */
+    min-width: 100vw;  /* Use 100vw for full viewport width */
+    z-index: -1;
+    
+}
+
+.header{
+    background-color: transparent;
+    top: 0;
+    display: flex;
+    align-items: baseline;
+    min-width: 100%;
+    min-height: 20%;
+    justify-content: space-between;
+    padding-top: 1rem;
+    z-index: 100; /* Adjust z-index as needed */
+}
+
+.mode-change{
+    display: flex;
+    margin-right: 15%;
+    align-items: center;
+    justify-content: center;
+}
+
+.mode-change input{
+    display: none;
+}
+
+.home-title {
+    display: flex;
+    align-items: baseline;
+    margin-left: 10%;
+    gap: 7px;
+}
+
+.home-title p {
+    font-size: 1.25rem;
+    color: white;
+}
+
+.title p:hover {
+    color: rgb(90, 90, 230);
+    cursor: pointer;
+}
+
+.home-icon i {
+    font-size: 1.25rem;
+    color: white;
+}
+
+.home-title:hover .title p,
+.home-title:hover .home-icon i {
+    color: rgb(90, 90, 230);
+    cursor: pointer;
+}
+
+
+
+.heaer-navigation{
+    border: 2px white;
+    margin-left: 10%;
+    min-width: 35%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.heaer-navigation a{
+    font-size: 1.25rem;
+    color: white;
+    text-decoration: none;
+    transition: .58s;
+}
+
+.heaer-navigation a:hover{
+    color: rgb(90, 90, 230);
+}
+
+/*  Cuxtomizing header after scroll  */
+.header.sticking{
+    background-color: white;
+    position: sticky;
+    box-shadow: 0px 18px 17px 4px rgba(0,0,0,0.1);
+}
+
+.header.sticking p{
+    color: rgb(90, 90, 230);
+}
+
+.header.sticking i{
+    color: rgb(45, 45, 239);
+}
+
+.header.sticking a{
+    color: #212020;
+}
+
+.header.sticking a:hover{
+    color: rgb(45, 45, 239);
+}
+
+/*  Cuxtomizing header after scroll end   */
+
+.mode-change i{
+    font-size: 1.25rem;
+    color: white;
+}
+
+.mode-change{
+    position: relative;
+    right: 4%;
+}
+
+.subscribe{
+    margin-right: 15%;
+    margin-left: 40%;
+}
+
+.subscribe button{
+    min-height: 3rem;
+    min-width: 8rem;
+    background-color: rgb(90, 90, 230);
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+}
+
+.subscribe button:hover{
+    cursor: pointer;
+}
+
+.lhs{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-top: 3%;
+}
+
+.discver-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.discver-text p{
+    color: white;
+}
+
+.discover p{
+    font-weight: bold;
+    font-size: 4rem;
+    line-height: .25rem;
+}
+
+.discover{
+    display: block;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 40%;
+    max-height: 25rem;
+    
+}
+
+.property-text{
+    max-width: 28%;
+}
+
+.property-text p{
+    font-size: 1rem;
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Align items with space in between */
+    text-align: center;
+    max-width: 35%;
+    margin-top: 2rem;
+    position: relative; /* Added for absolute positioning inside */
+}
+
+.input-field input {
+    min-width: 20rem;
+    min-height: 4rem;
+    border-radius: 10px;
+    padding-left: 35px; /* Adjusted padding to accommodate the icon */
+}
+
+.input-field i {
+    position: absolute;
+    left: 0; /* Set the icon to the left */
+    top: 50%; /* Vertically center the icon */
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+.input-field button {
+    position: absolute;
+    min-height: 2.8rem;
+    min-width: 6.7rem;
+    background-color: rgb(90, 90, 230);
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    left: 15rem;
+}
+
+.input-field button:hover{
+    cursor: pointer;
+}
+
+.reviews{
+    display: flex;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    margin-right: 3%;
+}
+
+.details-numbers{
+    display: flex;
+    max-height: 4.5rem;
+}
+
+.details-numbers p{
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.add-icn{
+    color: orange;
+}
+
+.details-text{
+    color: #121212;
+}
+
+.rhs {
+    position: absolute;
+    flex: 1;
+    max-width: 40%;
+    max-height: 20%;
+    right: 10%;
+    top: 25%;
+    margin-right: 10%;
+}
+
+.image-container {
+    border: 10px solid rgb(123, 123, 123);
+    border-radius: 51% 48% 10% 10% / 34% 33% 0% 0%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.rhs img {
+    object-fit: cover;
+    max-width: 100%;
+    height: auto; /* Remove max-height from here */
+    display: block;
+    margin-left: auto;
+    max-height: 50%;
+    z-index: 2; /* Adjusted to decrease the image height */
+}
+
+
+/*  Companies  */
+
+.companies {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 100%;
+    justify-content: space-evenly;
+    margin-top: 25%;
+    margin-bottom: 10%;
+    opacity: 0; /* Set initial opacity to 0 */
+    transform: translateY(-5rem); /* Set initial transform */
+    animation: companies-fade-in 1s forwards linear;
+}
+
+.companies img {
+    max-width: 20%;
+    max-height: 5rem;
+    opacity: .4;
+    transition: .5s;
+}
+
+.companies img:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+@keyframes companies-fade-in {
+    from{
+        opacity: 0;
+        transform: translateY(-5rem);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+/*  Companies-End */
+
+.homes-title{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    line-height: .25rem;
+}
+
+.choices{
+    max-height: 1rem;
+}
+.choices p{
+    color: gold;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.residences p{
+    color: rgb(63, 16, 130);
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.residences{
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+}
+
+#dot {
+    display: inline-block;
+    width: 10px; /* Adjust the width and height as needed for your design */
+    height: 10px;
+    background-color: gold; /* Set the background color of the dot */
+    border-radius: 50%; /* Make the dot circular by setting border-radius to 50% */
+    top: 3px;
+}
+.properties {
+    margin-top: 4%;
+    margin-left: 105px; /* Adjust left margin as needed */
+    margin-right: 15rem; /* Adjust right margin as needed */
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: calc(100% - 210px); /* Adjust total width considering left and right margins */
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory; /* Enable snap scrolling */
+    transition: .25s;
+}
+
+.properties-home {
+    flex: 0 0 auto; /* Disable flex growth */
+    width: 30%;
+    margin-right: 7%;
+    border-radius: 10px;
+    scroll-snap-align: start; /* Snap to the start of each item */
+    width: 30%; /* Set a specific width for each item */
+    margin-right: 3rem; /* Adjust the margin-right as needed */
+    border-radius: 10px;
+}
+
+.properties-home:last-child {
+    margin-right: 0; /* Remove margin-right for the last item to prevent unnecessary space */
+}
+
+.properties-home:hover {
+    box-shadow: 2px 21px 37px -19px rgba(0,0,0,0.75);
+    transition: box-shadow 0.3s ease; /* Add a smooth transition effect */
+}
+
+
+.proterty-photo {
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+.properties-home img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.dollar-sn {
+    color: gold;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.prop-price {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+}
+
+.price {
+    color: rgb(63, 16, 130);
+    font-weight: bold;
+    font-size: 2rem;
+    opacity: 0.5;
+}
+
+.prop-name p {
+    color: rgb(63, 16, 130);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.prop-location {
+    margin-top: 1.5rem;
+}
+
+.prop-location p {
+    color: #212020;
+    opacity: 0.75;
+   
+}
+
+.move-butt{
+    display: flex;
+    margin-top: 2rem;
+    margin-right: 10%;
+    justify-content: center;
+    gap: 4rem;
+    min-height: 3rem;
+}
+
+.slideLeft,
+.slideRight{
+    display: flex;
+    border: 2px rgb(143, 143, 143) solid;
+    border-radius: 5px;
+    min-width: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.slideLeft i,
+.slideRight i{
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(90, 90, 230);
+}
+
+.slideLeft:hover,
+.slideRight:hover{
+    cursor: pointer;
+}
+
+
+
+.value-lhs {
+    min-width: 30%;
+    margin-left: 10%;
+}
+
+.value-rhs{
+    max-width: 40%;
+}
+
+.value-photo {
+    overflow: hidden;
+    position: relative;
+    width: calc(75% + 8px); /* 80% of image width + 4px on each side */
+    height: auto;
+    border-radius: 50% 50% 10% 0% / 47% 47% 0% 0%;
+}
+
+.value-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: inherit; /* Inherit the border-radius from the container */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Add a white box-shadow for the glass effect */
+}
+
+.value-rhs p{
+    color: rgb(12, 0, 71);
+}
+
+.value {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 100%;
+    margin: 2%; /* Adjust margin as needed */
+    margin-top: 10%;
+}
+
+
+.our-value{
+    margin-bottom: 0;
+    display: flex;
+    max-height: 1rem;
+}
+#gold{
+    color: gold;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.value-we-give{
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    max-height: 6.5rem;
+}
+
+.value-we-give p{
+    font-size: 2.5rem;
+    font-weight: bold;
+    gap: 10px;
+}
+
+.value-para{
+    display: flex;
+    flex-direction: row;
+    max-width: 80%;
+    margin-bottom: 2rem;
+}
+
+.value-para p{
+    font-size: 1.25rem;
+    opacity: .75;
+}
+
+.dropper {
+    display: grid;
+    align-items: baseline;
+    border: 0.25px rgb(157, 203, 255) solid;
+    border-radius: 10px;
+    max-width: 80%;
+    margin-bottom: 7%;
+    grid-template-rows: 2rem; /* Set the initial height */
+    overflow: hidden; /* Ensure hidden overflow */
+    transition: max-height 0.3s ease; /* Add a smooth transition effect */
+    grid-template-rows: 0fr;
+}
+
+.dropper-info {
+    padding-left: 5%;
+    padding-right: 7%;
+    max-height: 0; /* Set a specific value for the expanded height */
+    overflow: hidden;
+    transition: max-height 0.3s ease; /* Add a smooth transition effect */
+}
+
+.dropper > .drop-down:focus + .dropper-info,
+.dropper > .dropper-upper:hover + .dropper-info {
+    max-height: 7rem;
+}
+
+
+.dropper:hover {
+    cursor: pointer;
+}
+
+
+.dropper:hover{
+    cursor: pointer;
+    transition: 500ms;
+}
+
+
+.dropper:hover {
+    cursor: pointer;
+    box-shadow: 0px 10px 26px -5px rgba(0,0,0,0.2);}
+
+.dropper-upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    min-width: 100%;
+}
+
+.dropper-upper p{
+    font-weight: bold;
+    color: rgb(47, 47, 106);
+    font-size: 1.25rem;
+}
+
+.dropper-icon {
+    margin-left: 1rem;
+}
+
+.drop-down{
+    margin-right: 10%;
+}
+
+
+.dropper-info p{
+    opacity: .75;
+}
+
+.contact-us{
+    display: flex;
+    margin-top: 10%;
+    justify-content: center
+}
+
+.contact-us p{
+    color: rgb(12, 0, 71);
+}
+
+.contact-rhs {
+    min-width: 28%;
+    max-height: 70vh;
+    margin-right: 10%;
+    background: rgb(255, 255, 255);
+    position: relative;
+    margin-left: 5%;
+    border-radius: 50% 50% 10% 0% / 47% 47% 0% 0%; /* Add this line for rounded borders */
+    
+}
+
+.contact-photo {
+    display: flex;
+    justify-content: center;
+    background-color: hsl(288, 24%, 97%);
+    border: 135px solid transparent; /* Fixing the border property */
+    z-index: -1;
+    border-radius: inherit; /* Inherit the border-radius from the parent */
+    min-height: 52%;
+    
+}
+
+.contact-rhs img {
+    position: absolute;
+    top: 1rem;
+    left: 2%;
+    bottom: 2rem;
+    max-width: 95%;
+    min-height: 95%;
+    object-fit: contain;
+    box-shadow: 0 16px 32px hsla(288, 66%, 25%, 0.25);
+    z-index: 50;
+    border-radius: inherit; /* Inherit the border-radius from the parent */
+    border-radius: 50% 50% 10% 0% / 47% 47% 0% 0%; /* Add this line for rounded borders */
+}
+
+.contact-lhs{
+    display: flex;
+    margin-left: 10%;
+    flex-direction: column;
+}
+
+.contact-upper{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 2rem;
+}
+
+.contact-title p{
+    font-weight: bold;
+    color: gold;
+    font-size: 1.5rem;
+    max-height: 0rem;
+}
+
+.easy-contact p{
+    display: flex;
+    font-size: 2rem;
+    font-weight: bold;
+    max-height: 1rem;
+    max-width: 50%rem;
+    justify-content: baseline;
+    align-items: baseline;
+    gap: .5rem;
+    color: rgb(18, 0, 110);
+}
+
+.contact-info p{
+    font-size: 1rem;
+    color: rgb(18, 0, 110);
+}
+
+.contact-para{
+    max-width: 80%;
+}
+
+.contact-para p{
+    font-size: 1.25rem;
+    color: rgb(18, 0, 110);
+}
+
+.contact-lower{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 5%;
+    max-width: 90%;
+    gap: 8%;
+}
+
+.calling-options{
+    display: flex;
+    flex-direction: column;
+    border: .5px solid rgb(211, 216, 255);
+    border-radius: 10px;
+    min-width: 17rem;
+    min-height: 10rem;
+    margin-bottom: 3%;
+}
+
+
+.contact-methord{
+    display: flex;
+    min-height: 50%;
+}
+
+.call-icon{
+    display: flex;
+    min-width: 2rem;
+    max-height: 2rem;
+    margin-left: 7%;
+    margin-top: 9%;
+    background-color: rgb(211, 216, 255);
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.contact-methord i{
+    font-size: 1.2rem;
+}
+
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    max-height: .2rem;
+    margin-left: 7%;
+    margin-top: 5%;
+    line-height: 5px;
+}
+
+#contact-info-option{
+    font-weight: bold;
+    font-size: 1rem;
+    max-height: .25rem;
+}
+
+.contact-btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.contact-btn button{
+    min-height: 3rem;
+    min-width: 60%;
+    font-weight: bold;
+    color: rgb(90, 90, 230);
+    background-color: rgb(211, 216, 255);
+    border-radius: 5px;
+    border: 0;
+    transition: .5s;
+}
+
+.contact-btn button:hover{
+    cursor: pointer;
+    color: white;
+    background-color: rgb(90, 90, 230);
+}
+
+.getting-stared-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    min-width: 100%;
+    min-height: 70vh;
+}
+
+.inner-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 25rem;
+    min-width: 65%;
+    border: 12px solid rgb(147, 147, 243);
+    background-color: rgb(76, 84, 223);
+    border-radius: 20px;
+}
+
+.started-title{
+    max-height: 4rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: 2rem;
+}
+.started-title p{
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.started-info p{
+    color: white;
+}
+
+.started-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 40%;
+}
+
+.started-button{
+    display: flex;
+    margin-top: 2%;
+}
+
+.started-button button{
+    min-height: 4.5rem;
+    min-width: 15rem;
+    color: white;
+    background-color: rgb(115, 121, 232);
+    border: solid white 2px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.started-button button:hover{
+    cursor: pointer;
+}
+
+.footer{
+    margin-top: 10%;
+    max-width: 100%;
+    max-height: 25rem;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.footer-upper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 20rem;
+}
+
+.footer-lwr{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.footer-lwr p{
+    color: rgb(18, 0, 110);
+}
+
+.rights{
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.tc{
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-lhs p{
+    color: rgb(18, 0, 110);
+}
+
+.footer-lhs{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-house{
+    display: flex;
+    align-items: baseline;
+    gap: .5rem;
+}
+
+.footer-house p{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(90, 90, 230);
+}
+
+.footer-house i{
+    font-size: 1.5rem;
+}
+
+.footer-house-info p{
+    font-size: 1rem;
+    font-weight: 300;
+    max-width: 20rem;
+}
+
+.footer-rhs p{
+    color: black;
+}
+
+.footer-rhs{
+    display: flex;
+    min-height: 100%;
+    gap: 4rem;
+}
+
+.footer-sections{
+    display: flex;
+    flex-direction: column;
+    min-width: 8rem;
+}
+
+.about-title p{
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: rgb(18, 0, 110);
+}
+
+.about-options{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+}
+
+.about-options p{
+    font-size: 1rem;
+}
+
+.follow-options{
+    display: flex;
+    gap: 1rem;
+    margin-top: 10%;
+}
+
+.follow-options i{
+    font-size: 1.5rem;
+}
+
+.footer p,i{
+    opacity: .5;
+    transition: .5s;
+}
+
+.footer p:hover,i:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+.up-button{
+    position: fixed;
+    box-shadow: 0px 4px 30px 31px rgba(0,0,0,0.1);
+    min-height: 4rem;
+    min-width: 4rem;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.up-button:hover{
+    cursor: pointer;
+}
